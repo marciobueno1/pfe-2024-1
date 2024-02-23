@@ -1,5 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
+import { Frase } from "./components/Frase";
+import { Numero } from "./components/Numero";
 
 function App() {
   return (
@@ -7,14 +9,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Olá turma!!!</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {Math.random() < 0.5 ? <Frase /> : <Numero />}
+        <hr />
+        {Math.random() < 0.5 && <Frase />}
       </header>
     </div>
   );
