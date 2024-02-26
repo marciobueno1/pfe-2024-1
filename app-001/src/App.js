@@ -7,8 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Olá turma!!!</p>
+        <img src={logo} className="App-logo" alt="logo" /> <p>Olá turma!!!</p>
         {Math.random() < 0.5 ? <Frase /> : <Numero />}
         <hr />
         {Math.random() < 0.5 && <Frase />}

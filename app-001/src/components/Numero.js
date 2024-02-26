@@ -1,3 +1,3 @@
 export function Numero() {
-  return <h1>0123456789</h1>;
+  return <h1>01234567890123456789</h1>;
 }
