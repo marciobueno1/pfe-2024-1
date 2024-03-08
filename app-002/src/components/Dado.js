@@ -1,11 +1,13 @@
-export const Dado = ({ valor }) => {
+export const Dado = ({ valor, exibirImg }) => {
   return (
     <>
-      <img
-        src={`/img/dado${valor}.png`}
-        alt={`Dado com valor ${valor}`}
-        style={{ width: 100, height: 100 }}
-      />
+      {exibirImg && (
+        <img
+          src={`/img/dado${valor}.png`}
+          alt={`Dado com valor ${valor}`}
+          style={{ width: 100, height: 100 }}
+        />
+      )}
       <h2>Dado = {valor}</h2>
     </>
   );
