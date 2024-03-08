@@ -1,3 +1,3 @@
-export function Frase() {
-  return <h1>Um texto simples</h1>;
+export function Frase({ palavra }) {
+  return <h2>Um texto simples: {palavra}</h2>;
 }
