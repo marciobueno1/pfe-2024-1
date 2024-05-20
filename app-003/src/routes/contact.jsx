@@ -1,15 +1,22 @@
-import { Form } from "react-router-dom";
+import { Form, useLoaderData } from "react-router-dom";
+import { getContact } from "../contacts";
 
+export async function loader({ params }) {
+  const contact = await getContact(params.contactId);
+  return { contact };
+}
 export default function Contact() {
-  const contact = {
-    first: "Your",
-    last: "Name",
-    avatar:
-      "https://media.istockphoto.com/id/1453871242/pt/foto/a-full-body-studio-portrait-of-an-orange-cat.webp?b=1&s=170667a&w=0&k=20&c=vT6KEngynLFJNkNcjx7Z64Z6l_5pDGkvMq5HtlH4xI0=",
-    twitter: "your_handle",
-    notes: "Some notes",
-    favorite: true,
-  };
+  // const contact = {
+  //   first: "Your",
+  //   last: "Name",
+  //   avatar:
+  //     "https://media.istockphoto.com/id/1453871242/pt/foto/a-full-body-studio-portrait-of-an-orange-cat.webp?b=1&s=170667a&w=0&k=20&c=vT6KEngynLFJNkNcjx7Z64Z6l_5pDGkvMq5HtlH4xI0=",
+  //   twitter: "your_handle",
+  //   notes: "Some notes",
+  //   favorite: true,
+  // };
+
+  const { contact } = useLoaderData();
 
   return (
     <div id="contact">
