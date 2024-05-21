@@ -54,6 +54,7 @@ export default function EditContact() {
         <span>Notes</span>
         <textarea name="notes" defaultValue={contact?.notes} rows={6} />
       </label>
+      <input type="hidden" name="favorite" value={contact?.favorite} />
       <p>
         <button type="submit">Save</button>
         <button

@@ -10,7 +10,7 @@ import { getContacts, createContact } from "../contacts";
 
 export async function action() {
   const contact = await createContact();
-  return redirect(`/contacts/${contact.id}/edit`);
+  return redirect(`/contacts/${contact.objectId}/edit`);
 }
 
 export async function loader() {
@@ -46,9 +46,9 @@ export default function Root() {
           {contacts.length ? (
             <ul>
               {contacts.map((contact) => (
-                <li key={contact.id}>
+                <li key={contact.objectId}>
                   <NavLink
-                    to={`contacts/${contact.id}`}
+                    to={`contacts/${contact.objectId}`}
                     className={({ isActive, isPending }) =>
                       isActive ? "active" : isPending ? "pending" : ""
                     }
