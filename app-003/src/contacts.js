@@ -3,7 +3,6 @@ const baseURL = "https://parseapi.back4app.com/classes/Contact";
 const headers = {
   "X-Parse-Application-Id": "IWUd0IFatPNUQq9Mb1qnFxVFzrqWATAvQl7OPbnR",
   "X-Parse-REST-API-Key": "e13dZgND1g2bizlNv8yJBPEuxZDY9Bgfw4X7cJ7q",
-  "Content-Type": "application/x-www-form-urlencoded",
 };
 
 const headersJson = {
